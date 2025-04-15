@@ -1,0 +1,101 @@
+html {
+  background-color: #E7D27E;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Times, serif;
+  background-color: #E7D27E;
+}
+
+.header {
+  padding: 20px;
+  text-align: center;
+  background: #B4AC8B;
+  color: white;
+  font-size: 30px;
+}
+
+.sidebar {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  background-color: #333333;
+  top: 0;
+  left: 0;
+  padding-top: 150px;
+}
+
+.sidebar a {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+  border-bottom: 1px dotted red;
+}
+
+.sidebar a:hover {
+  background-color: #dddddd;
+  color: black;
+}
+
+main {
+  margin-left: 220px;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #333333;
+  color: white;
+  margin-left: 200px;
+  width: calc(100% - 200px);
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  margin: 10px 150px 100px 80px;
+}
+
+p.cits {
+  color: yellow;
+}
+
+table {
+  background-color: #DE3163;
+  color: #FF7F50;
+  border: 1px solid red;
+  width: 50%;
+  margin: 0 auto;
+}
+
+th {
+  background-color: #5DADE2;
+  color: blue;
+}
+
+td {
+  background-color: green;
+}
+
+section {
+  background-color: #E7D27E;
+  padding: 20px;
+}
+
+/* Active link Bootstrap override */
+.nav-link.active {
+  background-color: yellow !important;
+  color: black !important;
+  font-weight: bold;
+  border-radius: 5px;
+}
