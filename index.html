@@ -1,57 +1,97 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Mana HTML lapa</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js"></script>
-  </head>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mana HTML lapa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
 
-  <body>
-    <header>
-      <nav>
-        <a href="/">Sākums</a>
-        <a href="par_mums.html">Par mums</a>
-        <a href="kontakti.html">Kontakti</a>
-        <a href="aptauja.html">Aptauja</a>
-        <a href="pamati_sintakse.html">Sintakse</a>
-      </nav>
-    </header>
+<body>
+  <!-- Header -->
+  <header class="header text-center">
+    <h1>Mana Lapa</h1>
+    <p>My supercool header</p>
+  </header>
 
-    <aside>
-      <a href="Saturs">Saturs</a>
-      <a href="Tabula">Tabula</a>
-    </aside>
+  <!-- Bootstrap Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" style="margin-left: 200px;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navigācija</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav w-100 justify-content-around">
+          <li class="nav-item"><a class="nav-link active" href="/">Sākums</a></li>
+          <li class="nav-item"><a class="nav-link" href="about_us.html">Par mums</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Kontakti</a></li>
+          <li class="nav-item"><a class="nav-link" href="survey.html">Aptauja</a></li>
+          <li class="nav-item"><a class="nav-link" href="basics_syntax.html">Pamati Sintakse</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <main>
-      <section id="Saturs">
-      <section id="Canva">
-        <canvas id="myCanvas" width="200" height="200"></canvas>
-        
-          <button type="button" onclick="taisnsturis!')">Taisnsturis!</button>
-          <button type="button" onclick="aplis!')">Aplis!</button>
-          <button type="button" onclick="(teksts!')">Teksts!</button>
-          <button type="button" onclick="linija!')">Linija!</button>
-        
-        
-        <h1>This is a INDEX file</h1>
-        <h2>&#128514;</h2>
-        <p>This is a paragraph.</p>
-        <img
-          src="https://cdn.glitch.global/efde7f74-0a68-447a-a539-ee57f9efabfe/attels.jpeg?v=1744355802622"
-          alt="Tedis"
-          width="300"
-          height="auto"
-        />
-        <marquee> teksts skrien kautkur :)</marquee>
-        <br />
-        <a href="https://www.w3schools.com/">Saite uz W3Schools.com!</a><br />
-        <a href="par_mums.html">Par mums</a> <br />
-        <a href="anketa.html">Anketa</a> <br />
-        <a href="/">Atpakaļ</a>
-        <p></p>
-      </section>
-        
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <ul>
+      <li><a href="#Saturs">Saturs</a></li>
+      <li><a href="#Tabula">Tabula</a></li>
+      <li><a href="#Canva">Canva</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main content -->
+  <main>
+ <section id="Saturs" class="container py-5">
+  <h1 class="text-center text-dark mb-4">Saturs</h1>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    
+    <div class="col">
+      <div class="card h-100 shadow">
+        <div class="card-body">
+          <h5 class="card-title">Mans pirmais HTML dokuments</h5>
+          <p class="card-text">Šī ir mana pirmā pieredze ar HTML.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 shadow bg-warning-subtle">
+        <div class="card-body">
+          <h5 class="card-title">Mans otrais HTML dokuments</h5>
+          <p class="card-text text-danger">Praktizēju tagad jau otru dokumentu.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 shadow">
+        <div class="card-body">
+          <h5 class="card-title">Mācību mērķis</h5>
+          <p class="card-text">
+            Šī lapa tiek izveidota, lai es iemācītos veidot mājas lapas. Mācībām tiks izmantotas HTML, CSS, JS un Python valodas.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col text-center">
+      <img src="https://cdn.glitch.global/efde7f74-0a68-447a-a539-ee57f9efabfe/attels.jpeg?v=1744355802622" 
+           class="img-fluid rounded" alt="Tedis" width="600">
+      <marquee class="mt-3">Mans teksts</marquee>
+      <a href="/" class="btn btn-outline-dark mt-3">Atpakaļ</a>
+    </div>
+
+  </div>
+</section>
+
+
+    <section id="Tabula">
+      <h1>Tabula</h1>
       <table>
         <tr>
           <th>Virsraksts 1</th>
@@ -59,42 +99,55 @@
           <th>Virsraksts 3</th>
         </tr>
         <tr>
-          <td colspan="2">Rinda 2 Kolonna 1 un kolonna 2 apvienoti</td>
+          <td colspan="2">Rinda 2 Kolonna 1 un 2 apvienoti</td>
           <td>Rinda 2 Kolonna 3</td>
         </tr>
         <tr>
           <td>Rinda 3 Kolonna 1</td>
           <td>Rinda 3 Kolonna 2</td>
-          <td rowspan="2">Rinda 3 un rinda 4 apvienota Kolonna 3 paliek</td>
+          <td rowspan="2">Rinda 3 un 4 apvienota Kolonna 3</td>
         </tr>
         <tr>
           <td>Rinda 4 Kolonna 1</td>
           <td>Rinda 4 Kolonna 2</td>
         </tr>
       </table>
+    </section>
 
-      <ol>
-        <li>viens</li>
-        <li>divi</li>
-        <li>trīs</li>
-      </ol>
+    <section id="Canva">
+      <h1>Kanva</h1>
+      <canvas id="zimejums" width="500" height="400"></canvas><br><br>
+      <button onclick="taisnsturis()" class="btn btn-success">Zīmēt taisnstūri</button>
+      <button onclick="aplis()" class="btn btn-warning">Zīmēt apli</button>
+      <button onclick="teksts()" class="btn btn-danger">Zīmēt tekstu</button>
+      <button onclick="linijas()" class="btn btn-primary">Zīmēt līnijas</button>
+      <button onclick="notirit()" class="btn btn-info">Notīrīt kanvu</button>
+    </section>
 
-      <ul>
-        <li>viens</li>
-        <li>divi</li>
-        <li>trīs</li>
-      </ul>
+    <article>
+      <h2>Raksts</h2>
+      <p>Teksts garš!</p>
+    </article>
+  </main>
 
-      <ol type="A">
-        <li>viens</li>
-        <li>divi</li>
-        <li>trīs</li>
-      </ol>
+  <!-- Footer -->
+  <footer>
+    <p>Author: &copy; Helga <br> 2025</p>
+  </footer>
 
-      <form>
-        <label for="fname">First name:</label>
-        <input type="text" id="fname" name="fname" /> <br /><br />
-      </form>
-    </main>
-  </body>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Active link skripts -->
+  <script>
+    const currentURL = window.location.href;
+    document.querySelectorAll('.nav-link').forEach(link => {
+      if (link.href === currentURL) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  </script>
+</body>
 </html>
