@@ -25,7 +25,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav w-100 justify-content-around">
-          <li class="nav-item"><a class="nav-link active" href="/">Sākums</a></li>
+          <li class="nav-item"><a class="nav-link" href="/">Sākums</a></li>
           <li class="nav-item"><a class="nav-link" href="about_us.html">Par mums</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Kontakti</a></li>
           <li class="nav-item"><a class="nav-link" href="survey.html">Aptauja</a></li>
@@ -46,6 +46,33 @@
 
   <!-- Main content -->
   <main>
+
+<section id="aprekini">
+  <label>Ievadi savu vārdu:</label>
+  <input type="text" id="vards">
+  <br><br>
+
+  <h2>Vienkāršs kalkulators</h2>
+
+  <label>Skaitlis 1:
+    <input type="number" id="num1">
+  </label><br><br>
+
+  <label>Skaitlis 2:
+    <input type="number" id="num2">
+  </label><br><br>
+
+  <button onclick="calculate('+')">Saskaitīt</button>
+  <button onclick="calculate('-')">Atņemt</button>
+  <button onclick="calculate('*')">Reizināt</button>
+  <button onclick="calculate('/')">Dalīt</button>
+  <button onclick="notirit1()">Notīrīt</button>
+
+  <h3>Rezultāts:</h3>
+  <p id="result" class="izcelts-rezultats"></p>
+</section>
+    
+    
  <section id="Saturs" class="container py-5">
   <h1 class="text-center text-dark mb-4">Saturs</h1>
   <div class="row row-cols-1 row-cols-md-2 g-4">
@@ -121,7 +148,7 @@
       <button onclick="aplis()" class="btn btn-warning">Zīmēt apli</button>
       <button onclick="teksts()" class="btn btn-danger">Zīmēt tekstu</button>
       <button onclick="linijas()" class="btn btn-primary">Zīmēt līnijas</button>
-      <button onclick="notirit()" class="btn btn-info">Notīrīt kanvu</button>
+      <button onclick="notirit2()" class="btn btn-info">Notīrīt kanvu</button>
     </section>
 
     <article>

@@ -24,11 +24,13 @@
 </head>
 <body>
 
-      <header class="header">
-      <h1>Header</h1>
-      <p>My supercool header</p>
+ <!-- Header -->
+  <header class="header text-center">
+    <h1>Mana Lapa</h1>
+    <p>My supercool header</p>
+  </header>
 
-<!-- Bootstrap Navbar -->
+  <!-- Bootstrap Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" style="margin-left: 200px;">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Navigācija</a>
@@ -38,7 +40,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav w-100 justify-content-around">
           <li class="nav-item"><a class="nav-link" href="/">Sākums</a></li>
-          <li class="nav-item"><a class="nav-link active" href="about_us.html">Par mums</a></li>
+          <li class="nav-item"><a class="nav-link" href="about_us.html">Par mums</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Kontakti</a></li>
           <li class="nav-item"><a class="nav-link" href="survey.html">Aptauja</a></li>
           <li class="nav-item"><a class="nav-link" href="basics_syntax.html">Pamati Sintakse</a></li>
@@ -46,9 +48,13 @@
       </div>
     </div>
   </nav>
-        
-    </header>
-  
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+
+  </aside>
+
+  <main>
 <h1>
   Par mums
   </h1>
@@ -56,9 +62,7 @@
   
   
   
-  
-  
-  
+    
   
 <canvas id="zimejums" width="500" height="400"></canvas><br>
 
@@ -66,10 +70,32 @@
 <button onclick="aplis()">Zīmēt apli</button>
 <button onclick="teksts()">Zīmēt tekstu</button>
 <button onclick="linijas()">Zīmēt līnijas</button>
-<button onclick="notirit()">Notīrīt kanvu</button>
+<button onclick="notirit2()">Notīrīt kanvu</button>
 
 <!-- Importē ārējo JS failu -->
   <script src="script.js"></script>
 
+    
+</main>
+  
+  <!-- Footer -->
+  <footer>
+    <p>Author: &copy; Helga <br> 2025</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Active link skripts -->
+  <script>
+    const currentURL = window.location.href;
+    document.querySelectorAll('.nav-link').forEach(link => {
+      if (link.href === currentURL) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  </script>
 </body>
 </html>

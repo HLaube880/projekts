@@ -94,8 +94,22 @@ section {
 
 /* Active link Bootstrap override */
 .nav-link.active {
-  background-color: yellow !important;
+  background-color: #E7D27E;
   color: black !important;
-  font-weight: bold;
+  /* font-weight: bold; */
   border-radius: 5px;
 }
+
+
+  .izcelts-rezultats {
+    font-size: 24px;
+    color: darkblue;
+    font-weight: bold;
+    background-color: #e0f0ff;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #0088cc;
+    width: fit-content;
+    margin-top: 10px;
+  }
+
