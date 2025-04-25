@@ -1,14 +1,12 @@
-html {
+/* Fona krāsas un kopējais noformējums */
+html, body {
   background-color: #E7D27E;
-}
-
-body {
   margin: 0;
   padding: 0;
   font-family: "Times New Roman", Times, serif;
-  background-color: #E7D27E;
 }
 
+/* Galvene */
 .header {
   padding: 20px;
   text-align: center;
@@ -17,6 +15,7 @@ body {
   font-size: 30px;
 }
 
+/* Sānu izvēlne */
 .sidebar {
   height: 100%;
   width: 200px;
@@ -41,12 +40,14 @@ body {
   color: black;
 }
 
+/* Galvenais saturs */
 main {
   margin-left: 220px;
   padding: 20px;
   margin-top: 50px;
 }
 
+/* Kājene */
 footer {
   text-align: center;
   padding: 15px;
@@ -56,20 +57,7 @@ footer {
   width: calc(100% - 200px);
 }
 
-h1 {
-  color: white;
-  text-align: center;
-}
-
-p {
-  text-align: center;
-  margin: 10px 150px 100px 80px;
-}
-
-p.cits {
-  color: yellow;
-}
-
+/* Tabula */
 table {
   background-color: #DE3163;
   color: #FF7F50;
@@ -87,29 +75,15 @@ td {
   background-color: green;
 }
 
-section {
-  background-color: #E7D27E;
-  padding: 20px;
+/* Rezultāta stils */
+.izcelts-rezultats {
+  font-size: 24px;
+  color: darkblue;
+  font-weight: bold;
+  background-color: #e0f0ff;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #0088cc;
+  width: fit-content;
+  margin-top: 10px;
 }
-
-/* Active link Bootstrap override */
-.nav-link.active {
-  background-color: #E7D27E;
-  color: black !important;
-  /* font-weight: bold; */
-  border-radius: 5px;
-}
-
-
-  .izcelts-rezultats {
-    font-size: 24px;
-    color: darkblue;
-    font-weight: bold;
-    background-color: #e0f0ff;
-    padding: 10px;
-    border-radius: 8px;
-    border: 2px solid #0088cc;
-    width: fit-content;
-    margin-top: 10px;
-  }
-

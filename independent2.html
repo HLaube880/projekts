@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <title>Colļu konvertētājs</title>
+</head>
+<body>
+    <h1>Colļu uz centimetriem konvertētājs</h1>
+    
+    <p>Ievadiet garumu collās, lai pārvērstu to uz centimetriem. (1 colla = 2.54 cm)</p>
+    
+    <input type="number" id="inchesInput" placeholder="Ievadiet collas">
+    <button onclick="konvertet()">Konvertēt</button>
+    
+    <p id="rezultats"></p>
+
+    <button onclick="lejupielade()">Lejupielādēt rezultātu</button>
+
+    <script>
+        let pedejaisRezultats = '';
+
+        function konvertet() {
+            const inches = parseFloat(document.getElementById("inchesInput").value);
+            if (isNaN(inches)) {
+                document.getElementById("rezultats").textContent = "Lūdzu ievadiet derīgu skaitli!";
+                return;
+            }
+
+            const cm = inches * 2.54;
+            const rezultatsTeksts = `${inches} collas ir ${cm.toFixed(2)} centimetri.`;
+
+            document.getElementById("rezultats").textContent = rezultatsTeksts;
+            pedejaisRezultats = rezultatsTeksts;
+        }
+
+        function lejupielade() {
+            if (!pedejaisRezultats) {
+                alert("Nav rezultāta, ko lejupielādēt!");
+                return;
+            }
+
+            const blob = new Blob([pedejaisRezultats], { type: "text/plain" });
+            const url = URL.createObjectURL(blob);
+
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "konvertacijas_rezultats.txt";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
