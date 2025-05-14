@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8" />
+  <title>{% block title %}Pamati Sintakse{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+  <div class="container my-4">
+    <h1 class="mb-4">Pamati Sintakse</h1>
+    <p>Trenējam Python.</p>
+
+   
+    <nav class="mb-4">
+      <ul class="nav flex-column">
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('sveiciens') }}">Sveiciens Pasaule</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('mainigie') }}">Mainīgie</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('datu_tipi') }}">Datu tipi</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('operatori') }}">Operatori</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('kontroles_strukturas') }}">Kontroles struktūras</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('funkcijas') }}">Funkcijas</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('ievade_izvade') }}">Ievade Izvade</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('failu_apstrade') }}">Failu apstrāde</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('oop') }}">OOP</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('joks') }}">Joks</a></li>
+        <li class="nav-item"><a class="nav-link" href="{{ url_for('csv2') }}">CSV2</a></li>
+      </ul>
+    </nav>  
+
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+  </div>
+</body>
+</html>

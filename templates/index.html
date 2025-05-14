@@ -1,17 +1,25 @@
-<!DOCTYPE html>
 <html lang="lv">
 <head>
   <meta charset="UTF-8" />
   <title>Mana HTML lapa</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
 </head>
 
 <body>
+  <!-- Sānu izvēlne -->
+  <aside class="sidebar bg-light position-fixed top-0 start-0 p-3" style="width: 200px; height: 100vh; z-index: 1030;">
+    <ul class="nav flex-column">
+      <li class="nav-item"><a class="nav-link" href="#Saturs">Saturs</a></li>
+      <li class="nav-item"><a class="nav-link" href="#Tabula">Tabula</a></li>
+      <li class="nav-item"><a class="nav-link" href="#Canva">Canva</a></li>
+    </ul>
+  </aside>
+
   <!-- Galvene -->
-  <header class="header text-center">
+  <header class="header text-center" style="margin-left: 200px;">
     <h1>Mana Lapa</h1>
     <p>Mans stilīgais virsraksts</p>
   </header>
@@ -26,27 +34,18 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav w-100 justify-content-around">
           <li class="nav-item"><a class="nav-link" href="/">Sākums</a></li>
-          <li class="nav-item"><a class="nav-link" href="about_us.html" onclick="atjaunotIetvaru(this); return false;">Par mums</a></li>
+          <li class="nav-item"><a class="nav-link" href="about_us" onclick="atjaunotIetvaru(this); return false;">Par mums</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html" onclick="atjaunotIetvaru(this); return false;">Kontakti</a></li>
           <li class="nav-item"><a class="nav-link" href="survey.html" onclick="atjaunotIetvaru(this); return false;">Aptauja</a></li>
-          <li class="nav-item"><a class="nav-link" href="basics_syntax.html" onclick="atjaunotIetvaru(this); return false;">Pamati Sintakse</a></li>
-          <li class="nav-item"><a class="nav-link" href="independent2.html" onclick="atjaunotIetvaru(this); return false;">Patstāvīgais 2</a></li>        
+          <li class="nav-item"><a class="nav-link" href="template/basics_syntax.html" onclick="atjaunotIetvaru(this); return false;">Pamati Sintakse</a></li>
+          <li class="nav-item"><a class="nav-link" href="independent2.html" onclick="atjaunotIetvaru(this); return false;">Patstāvīgais 2</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Sānu izvēlne -->
-  <aside class="sidebar">
-    <ul>
-      <li><a href="#Saturs">Saturs</a></li>
-      <li><a href="#Tabula">Tabula</a></li>
-      <li><a href="#Canva">Canva</a></li>
-    </ul>
-  </aside>
-
   <!-- Galvenais saturs -->
-  <main id="lapas_saturs">
+  <main id="lapas_saturs" style="margin-left: 200px;" class="p-4">
     <!-- Aprēķinu sadaļa -->
     <section id="aprekini">
       <label>Ievadi savu vārdu:</label>
@@ -76,7 +75,6 @@
     <section id="Saturs" class="container py-5">
       <h1 class="text-center text-dark mb-4">Saturs</h1>
       <div class="row row-cols-1 row-cols-md-2 g-4">
-        <!-- Katrs saturs kartē -->
         <div class="col">
           <div class="card h-100 shadow">
             <div class="card-body">
@@ -116,7 +114,7 @@
     <!-- Tabula -->
     <section id="Tabula">
       <h1>Tabula</h1>
-      <table>
+      <table class="table table-bordered">
         <tr>
           <th>Virsraksts 1</th>
           <th>Virsraksts 2</th>
@@ -157,7 +155,7 @@
   </main>
 
   <!-- Kājene -->
-  <footer>
+  <footer style="margin-left: 200px;" class="text-center py-4">
     <p>Autore: &copy; Helga <br> 2025</p>
   </footer>
 

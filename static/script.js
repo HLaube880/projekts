@@ -1,16 +1,19 @@
 // Atjauno saturu iframe elementā
 function atjaunotIetvaru(which) {
-  const objekts = document.createElement("object");
-  objekts.id = "lapas";
-  objekts.type = "text/html";
-  objekts.data = which.href;
-  objekts.style.width = "100%";
-  objekts.style.height = "800px";
+  let objekts = document.getElementById("lapas");
 
-  const saturs = document.getElementById("lapas_saturs");
-  saturs.innerHTML = "";
-  saturs.appendChild(objekts);
+  if (!objekts) {
+    objekts = document.createElement("object");
+    objekts.id = "lapas";
+    objekts.type = "text/html";
+    objekts.style.width = "100%";
+    objekts.style.height = "800px";
+    document.getElementById("lapas_saturs").appendChild(objekts);
+  }
+
+  objekts.data = which.href;
 }
+
 
 // Kalkulators
 function calculate(operator) {

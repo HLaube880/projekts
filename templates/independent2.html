@@ -1,21 +1,31 @@
+<!-- templates/index.html -->
 <!DOCTYPE html>
 <html lang="lv">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colļu konvertētājs</title>
-</head>
-<body>
-    <h1>Colļu uz centimetriem konvertētājs</h1>
-    
-    <p>Ievadiet garumu collās, lai pārvērstu to uz centimetriem. (1 colla = 2.54 cm)</p>
-    
-    <input type="number" id="inchesInput" placeholder="Ievadiet collas">
-    <button onclick="konvertet()">Konvertēt</button>
-    
-    <p id="rezultats"></p>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+        }
 
-    <button onclick="lejupielade()">Lejupielādēt rezultātu</button>
+        input, button {
+            margin-top: 10px;
+            padding: 8px;
+            font-size: 16px;
+        }
 
+        #rezultats {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
     <script>
         let pedejaisRezultats = '';
 
@@ -41,15 +51,24 @@
 
             const blob = new Blob([pedejaisRezultats], { type: "text/plain" });
             const url = URL.createObjectURL(blob);
-
             const a = document.createElement("a");
             a.href = url;
-            a.download = "konvertacijas_rezultats.txt";
-            document.body.appendChild(a);
+            a.download = "rezultats.txt";
             a.click();
-            document.body.removeChild(a);
             URL.revokeObjectURL(url);
         }
     </script>
+</head>
+<body>
+    <h1>Colļu uz centimetriem konvertētājs</h1>
+    
+    <p>Ievadiet garumu collās, lai pārvērstu to uz centimetriem. (1 colla = 2.54 cm)</p>
+    
+    <input type="number" id="inchesInput" placeholder="Ievadiet collas" min="0">
+    <button onclick="konvertet()">Konvertēt</button>
+    
+    <p id="rezultats"></p>
+
+    <button onclick="lejupielade()">Lejupielādēt rezultātu</button>
 </body>
 </html>
