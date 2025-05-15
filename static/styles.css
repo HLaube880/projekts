@@ -20,7 +20,7 @@ html, body {
   height: 100%;
   width: 200px;
   position: fixed;
-  background-color: #333333;
+  background-color: #070707;
   top: 0;
   left: 0;
   padding-top: 150px;
@@ -35,8 +35,8 @@ html, body {
   border-bottom: 1px dotted red;
 }
 
-.sidebar a:hover {
-  background-color: #dddddd;
+.asidebar a:hover {
+  background-color: #070707;
   color: black;
 }
 
