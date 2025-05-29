@@ -1,3 +1,5 @@
 flask
-werkzrug
-request
+requests
+xmltodict
+pyyaml
+werkzeug

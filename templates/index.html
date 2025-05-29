@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="lv">
 <head>
   <meta charset="UTF-8" />
@@ -9,8 +10,23 @@
 </head>
 
 <body>
+  <!-- Galvene -->
+  <header class="text-center #6E260E">
+    <h1>Mana Lapa</h1>
+    <p class="text-muted">Mans stilīgais virsraksts</p>
+  </header>
+
+  <!-- Navigācijas josla -->
+  <nav class="topnav d-flex flex-wrap justify-content-center gap-2  bg-secondary text-white">
+    <a href="/" class="btn btn-dark">Sākums</a>
+    <a href="par_mums" onclick="atjaunotIetvaru(this); return false;" class="btn btn-dark">Par mums</a>
+    <a href="kontakti" onclick="atjaunotIetvaru(this); return false;" class="btn btn-dark">Kontakti</a>
+    <a href="aptauja" onclick="atjaunotIetvaru(this); return false;" class="btn btn-dark">Aptauja</a>
+    <a href="pamati_sintakse" onclick="atjaunotIetvaru(this); return false;" class="btn btn-dark">Pamati Sintakse</a>
+  </nav>
+
   <!-- Sānu izvēlne -->
-  <aside class="sidebar bg-light position-fixed top-0 start-0 p-3" style="width: 200px; height: 100vh; z-index: 1030;">
+  <aside class="sidebar position-fixed top-0 start-0  p-3 border-end" style="width: 200px; height: 100vh; z-index: 1030;">
     <ul class="nav flex-column">
       <li class="nav-item"><a class="nav-link" href="#Saturs">Saturs</a></li>
       <li class="nav-item"><a class="nav-link" href="#Tabula">Tabula</a></li>
@@ -18,57 +34,35 @@
     </ul>
   </aside>
 
-  <!-- Galvene -->
-  <header class="header text-center" style="margin-left: 200px;">
-    <h1>Mana Lapa</h1>
-    <p>Mans stilīgais virsraksts</p>
-  </header>
-
-  <!-- Navigācijas josla -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" style="margin-left: 200px;">
-    <div class="container-fluid">
-    <!-- <a class="navbar-brand" href="#">Navigācija</a> -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"> 
-        <span class="navbar-toggler-icon"></span>
-      </button> 
-      <div class="collapse navbar-collapse" id="navbarNav">  
-        <ul class="navbar-nav w-100 justify-content-around">
-          <li class="nav-item"><a href="/">Sākums</a></li>
-          <li class="nav-item"><a href="about_us">Par mums</a></li>
-          <li class="nav-item"><a href="contact">Kontakti</a></li>
-          <li class="nav-item"><a href="survey">Aptauja</a></li>
-          <li class="nav-item"><a href="basics_syntax">Pamati Sintakse</a></li>
-          <li class="nav-item"><a href="independent2">Patstāvīgais 2</a></li>
-        </ul>
-      </div>  
-    </div>
-  </nav>
-
   <!-- Galvenais saturs -->
-  <main id="lapas_saturs" style="margin-left: 200px;" class="p-4">
+  <main id="lapas_saturs">
     <!-- Aprēķinu sadaļa -->
-    <section id="aprekini">
+    <section id="aprekini" class="my-4">
       <label>Ievadi savu vārdu:</label>
-      <input type="text" id="vards"><br><br>
+      <input type="text" id="vards" class="form-control w-25"><br>
 
       <h2>Vienkāršs kalkulators</h2>
 
-      <label>Skaitlis 1:
-        <input type="number" id="num1">
-      </label><br><br>
+      <div class="mb-3">
+        <label>Skaitlis 1:</label>
+        <input type="number" id="num1" class="form-control w-25">
+      </div>
 
-      <label>Skaitlis 2:
-        <input type="number" id="num2">
-      </label><br><br>
+      <div class="mb-3">
+        <label>Skaitlis 2:</label>
+        <input type="number" id="num2" class="form-control w-25">
+      </div>
 
-      <button onclick="calculate('+')">Saskaitīt</button>
-      <button onclick="calculate('-')">Atņemt</button>
-      <button onclick="calculate('*')">Reizināt</button>
-      <button onclick="calculate('/')">Dalīt</button>
-      <button onclick="notirit1()">Notīrīt</button>
+      <div class="mb-3">
+        <button onclick="calculate('+')" class="btn btn-primary">Saskaitīt</button>
+        <button onclick="calculate('-')" class="btn btn-secondary">Atņemt</button>
+        <button onclick="calculate('*')" class="btn btn-success">Reizināt</button>
+        <button onclick="calculate('/')" class="btn btn-warning">Dalīt</button>
+        <button onclick="notirit1()" class="btn btn-danger">Notīrīt</button>
+      </div>
 
       <h3>Rezultāts:</h3>
-      <p id="result" class="izcelts-rezultats"></p>
+      <p id="result" class="izcelts-rezultats fs-4"></p>
     </section>
 
     <!-- Saturs -->
@@ -112,7 +106,7 @@
     </section>
 
     <!-- Tabula -->
-    <section id="Tabula">
+    <section id="Tabula" class="container my-5">
       <h1>Tabula</h1>
       <table class="table table-bordered">
         <tr>
@@ -137,25 +131,30 @@
     </section>
 
     <!-- Zīmēšana ar kanvu -->
-    <section id="Canva">
+    <section id="Canva" class="container my-5">
       <h1>Kanva</h1>
-      <canvas id="zimejums" width="500" height="400"></canvas><br><br>
-      <button onclick="taisnsturis()" class="btn btn-success">Zīmēt taisnstūri</button>
-      <button onclick="aplis()" class="btn btn-warning">Zīmēt apli</button>
-      <button onclick="teksts()" class="btn btn-danger">Zīmēt tekstu</button>
-      <button onclick="linijas()" class="btn btn-primary">Zīmēt līnijas</button>
-      <button onclick="notirit2()" class="btn btn-info">Notīrīt kanvu</button>
+      <canvas id="zimejums"   width="570" height="400" class="border"></canvas><br><br>
+      <div class="d-flex flex-wrap gap-2">
+        <button onclick="taisnsturis()" class="btn btn-success">Zīmēt taisnstūri</button>
+        <button onclick="aplis()" class="btn btn-warning">Zīmēt apli</button>
+        <button onclick="teksts()" class="btn btn-danger">Zīmēt tekstu</button>
+        <button onclick="linijas()" class="btn btn-primary">Zīmēt līnijas</button>
+        <button onclick="notirit2()" class="btn btn-info">Notīrīt kanvu</button>
+      </div>
     </section>
 
     <!-- Raksta sadaļa -->
-    <article>
+    <article class="container my-4">
       <h2>Raksts</h2>
       <p>Teksts garš!</p>
+       <p>Teksts garš!</p>
+       <p>Teksts garš!</p>
+      <br><br>
     </article>
   </main>
 
   <!-- Kājene -->
-  <footer style="margin-left: 200px;" class="text-center py-4">
+  <footer class="text-center #6E260E">
     <p>Autore: &copy; Helga <br> 2025</p>
   </footer>
 

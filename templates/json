@@ -1,0 +1,10 @@
+{% extends "pamati_sintakse.html" %}
+
+{% block content %}
+<h1>Chuck Norris Joki</h1>
+<pre>
+<img src="{{ avatars }}">
+Joks: {{ joks }}
+Joka adrese ir: <a href="{{ adrese }}" target="_blank">Joka adrese ir šeit</a>
+</pre>
+{% endblock %}

@@ -1,89 +1,133 @@
-/* Fona krāsas un kopējais noformējums */
-html, body {
-  background-color: #E7D27E;
+/* Pamatstils */
+html,
+body {
+  height: 100%;
   margin: 0;
   padding: 0;
+  width: 100%;
+  background-color: #d8b527;
   font-family: "Times New Roman", Times, serif;
+  box-sizing: border-box;
 }
 
-/* Galvene */
-.header {
-  padding: 20px;
-  text-align: center;
-  background: #B4AC8B;
-  color: white;
-  font-size: 30px;
+/* Navigācija */
+.topnav {
+  position: fixed;
+  top: 20;
+  left: 200px; /* vieta sānu izvēlnei */
+  width: calc(100% - 200px);
+  height: 50px;
+  background-color: #070707;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 10;
+}
+
+.topnav a {
+  /* flex: 1; */  /* noņem flex:1 */
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  height: 100%;
+  font-weight: bold;
+  transition: background-color #0000FF;
+}
+
+.topnav a:hover,
+.topnav a.active {
+  background-color: #d8b527;
+  color: #000000;
 }
 
 /* Sānu izvēlne */
 .sidebar {
-  height: 100%;
-  width: 200px;
   position: fixed;
-  background-color: #070707;
   top: 0;
   left: 0;
-  padding-top: 150px;
+  width: 200px;
+  height: 100%;
+  background-color: #CCCCFF;
+  padding-top: 60px; /* lai nesakrīt ar topnav */
+  box-sizing: border-box;
+  z-index: 20; /* lai būtu virs topnav ja vajadzēs */
 }
 
 .sidebar a {
   padding: 10px;
   text-decoration: none;
   font-size: 18px;
-  color: white;
+  color: #6495ED;
   display: block;
-  border-bottom: 1px dotted red;
+  border: 1px dotted #6495ED;
+  transition: background-color bg-light;
 }
 
-.asidebar a:hover {
-  background-color: #070707;
-  color: black;
-}
+/*.sidebar a:hover {
+  background-color: #641e16;
+  color: black; 
+}  */
 
-/* Galvenais saturs */
+/* Galvenais saturs — šeit svarīgi nodrošināt nobīdi */
 main {
-  margin-left: 220px;
-  padding: 20px;
-  margin-top: 50px;
+  margin-left: 200px;      /* vieta sānu izvēlnei */
+  margin-top: 50px;        /* vieta topnav (nav jābūt 70px, jo topnav ir 50px augsta) */
+  margin-bottom: 60px;     /* vieta footer, kas ir ~50-60px augsts */
+  padding: 25px;
+  box-sizing: border-box;
+  min-height: calc(100vh - 110px); /* lai saturs neaizsedz footer un header vietu */
 }
 
-/* Kājene */
-footer {
-  text-align: center;
-  padding: 15px;
-  background-color: #333333;
-  color: white;
-  margin-left: 200px;
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 200px;
   width: calc(100% - 200px);
+  height: 50px;
+ /* background-color: #641e16; */
+  z-index: 15;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 15px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #fdfefe;
 }
 
-/* Tabula */
-table {
-  background-color: #DE3163;
-  color: #FF7F50;
-  border: 1px solid red;
-  width: 50%;
-  margin: 0 auto;
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 200px;
+  width: calc(100% - 200px);
+  height: 60px;
+  background-color: #641e16;
+  padding: 15px 25px;
+  color: white;
+  text-align: center;
+  z-index: 15;
 }
 
-th {
-  background-color: #5DADE2;
-  color: blue;
-}
-
-td {
-  background-color: green;
-}
-
-/* Rezultāta stils */
-.izcelts-rezultats {
+/* Pielāgo tekstu headerī, footerī, jo tagad tie fiksēti */
+header h1 {
+  margin: 0;
   font-size: 24px;
-  color: darkblue;
-  font-weight: bold;
-  background-color: #e0f0ff;
-  padding: 10px;
-  border-radius: 8px;
-  border: 2px solid #0088cc;
-  width: fit-content;
-  margin-top: 10px;
+  color: #fdfefe;
 }
+
+header p {
+  margin: 0;
+  font-size: 14px;
+  color: #fdfefe;
+}
+
+#zimejums {
+  background-color: #D27D2D;
+}
+
+
+

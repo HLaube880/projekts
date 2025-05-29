@@ -1,13 +1,12 @@
-{% extends "basics_syntax.html" %} {% block content %}
+{% extends "pamati_sintakse.html" %}
+
 {% block content %}
-
-<h2>Mainīgie</h2>
+<h1>Mainīgie!</h1>
 <pre>
-vards={{vards}}
-vecums={{vecums}}
-skaitlis1 + skaitlis2={{summa}}
-
+vards = {{ vards }}
+vecums = {{ vecums }}
+skaitlis1 + skaitlis2 = {{ summa }}
+skaitlis1 = {{ viens }}
+skaitlis2 = {{ divi }}
 </pre>
 {% endblock %}
-
-

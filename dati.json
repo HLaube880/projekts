@@ -1,0 +1,50 @@
+[
+    {
+      "Vards": "Jānis",
+      "Uzvards": "Ozols",
+      "Vecums": 30,
+      "Dzimums": "Vīrietis"
+    },
+    {
+      "Vards": "Anna",
+      "Uzvards": "Kalniņa",
+      "Vecums": 25,
+      "Dzimums": "Sieviete"
+    },
+    {
+      "Vards": "Pēteris",
+      "Uzvards": "Strautiņš",
+      "Vecums": 22,
+      "Dzimums": "Vīrietis"
+    },
+    {
+      "Vards": "Elīna",
+      "Uzvards": "Lejiņa",
+      "Vecums": 28,
+      "Dzimums": "Sieviete"
+    },
+    {
+      "Vards": "Mārtiņš",
+      "Uzvards": "Ilziņš",
+      "Vecums": 40,
+      "Dzimums": "Vīrietis"
+    },
+    {
+      "Vards": "Zane",
+      "Uzvards": "Saulīte",
+      "Vecums": 35,
+      "Dzimums": "Sieviete"
+    },
+    {
+      "Vards": "Gatis",
+      "Uzvards": "Smilga",
+      "Vecums": 23,
+      "Dzimums": "Vīrietis"
+    },
+    {
+      "Vards": "Marta",
+      "Uzvards": "Bērziņa",
+      "Vecums": 26,
+      "Dzimums": "Sieviete"
+    }
+  ]

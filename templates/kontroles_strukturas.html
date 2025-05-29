@@ -1,3 +1,11 @@
 
+{% extends "pamati_sintakse.html" %}
 
-<h1>Kontrole</h1>
+{% block content %}
+<h1>Operatori</h1>
+<pre>
+IF rezultāts = {{ rezultats }}
+FOR cikla rezultāts = {{ for_cikls_rezultats }}
+WHILE cikla rezultāts = {{ while_cikla_rezultats }}
+</pre>
+{% endblock %}

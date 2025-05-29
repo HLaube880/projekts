@@ -1,17 +1,28 @@
+
+window.onload = function(){
+  var navLinks = document.querySelectorAll('.topnav a');
+  console.log(navLinks);
+
+  navLinks.forEach(function(link){
+    link.addEventListener('click', function(event){
+      // Noņem 'active' klasi no visiem linkiem
+      navLinks.forEach(function(l){
+        l.classList.remove('active');
+      });
+
+      // Pievieno 'active' klikšķētajam linkam
+      this.classList.add('active');
+    });
+  });
+}
+
+
+
+
+
 // Atjauno saturu iframe elementā
 function atjaunotIetvaru(which) {
-  let objekts = document.getElementById("lapas");
-
-  if (!objekts) {
-    objekts = document.createElement("object");
-    objekts.id = "lapas";
-    objekts.type = "text/html";
-    objekts.style.width = "100%";
-    objekts.style.height = "800px";
-    document.getElementById("lapas_saturs").appendChild(objekts);
-  }
-
-  objekts.data = which.href;
+document.getElementById('lapas_saturs').innerHTML = '<'+'object id="lapas" name="lapas" type="text/html" data=" '+which.href+'"><\/object>';
 }
 
 
@@ -26,7 +37,7 @@ function calculate(operator) {
     return;
   }
 
-  const vardsRegex = /^[A-ZĀČĒĢĪĶĻŅŠŪŽ][a-zāčēģīķļņšūž]*$/;
+  const vardsRegex = /^[A-ZĀČĒĢĪĶĻŅŠŪŽ][a-zāčēģīķļņšūž]*$/; //JS REGexp
   if (!vardsRegex.test(vards)) {
     alert("Vārdam jāsākas ar lielo burtu un nedrīkst saturēt ciparus vai simbolus.");
     return;
