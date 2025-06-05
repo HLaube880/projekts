@@ -1,3 +1,16 @@
+<html>
+  
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Aptauja</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+
+
 <h1>Aptaujas anketa</h1>
 <form action="{{ url_for('iesniegt') }}" method="post">
   <label for="vards">Vārds</label>
@@ -23,3 +36,5 @@
   <label for="hobijs5">Mūzika</label><br>
   <button type="submit">Iesniegt</button>
 </form>
+  
+  </html>
